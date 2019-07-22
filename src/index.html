@@ -11,42 +11,50 @@
 
 <body>
 
-    <h1>Daily Journal</h1>
+    <div id="journalList">
 
-    <form action="">
+        <h1>Daily Journal</h1>
 
-        <fieldset class="container">
-            <label for="journalDate">Date of Entry</label>
-            <input type="date" name="journalDate" id="journalDate">
-        </fieldset>
+        <form action="">
 
-        <fieldset>
-            <label for="journalConcepts">Concepts Covered</label>
-            <input type="text" name="journalConcepts" id="journalConcepts">
-        </fieldset>
+            <fieldset class="container">
+                <label for="journalDate">Date of Entry</label>
+                <input type="date" name="journalDate" id="journalDate">
+            </fieldset>
 
-        <fieldset>
-            <label for="journalEntry">Journal Entry</label>
-            <textarea name="message" rows="1" cols="33">Message</textarea>
-        </fieldset>
+            <fieldset>
+                <label for="journalConcepts">Concepts Covered</label>
+                <input type="text" name="journalConcepts" id="journalConcepts">
+            </fieldset>
 
-        <fieldset>
-            <label for="mood">Mood for the Day</label>
-            <select>
-                <option value="despair">Despair</option>
-                <option value="confused">A little confused</option>
-                <option value="okay">Okay</option>
-                <option value="happy">Happy</option>
-                <option value="amazing">Amazing</option>
-            </select>
-        </fieldset>
+            <fieldset>
+                <label for="journalEntry">Journal Entry</label>
+                <textarea name="message" rows="1" cols="33">Message</textarea>
+            </fieldset>
 
-        <input type="button" onclick="alert('Your entry has been submitted')" value="Record Journal Entry">
+            <fieldset>
+                <label for="mood">Mood for the Day</label>
+                <select>
+                    <option value="despair">Despair</option>
+                    <option value="confused">A little confused</option>
+                    <option value="okay">Okay</option>
+                    <option value="happy">Happy</option>
+                    <option value="amazing">Amazing</option>
+                </select>
+            </fieldset>
+
+            <input type="button" onclick="alert('Your entry has been submitted')" value="Record Journal Entry">
 
 
-    </form>
+        </form>
 
-<script src="scripts/journal.js"></script>
+        <article id="entryLog">
+
+        </article>
+
+    </div>
+
+    <script src="scripts/journal.js"></script>   
 </body>
 
 </html>
