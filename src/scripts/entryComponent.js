@@ -1,4 +1,5 @@
-const makeJournalEntryComponent = journalEntry => {
+const makeJournalEntryComponent = {
+    createJournalEntry (journalEntry) {
     return `
         <section>
             <h2>${journalEntry.date}</h2>
@@ -8,3 +9,6 @@ const makeJournalEntryComponent = journalEntry => {
         </section>
     `
 }
+}
+
+export default makeJournalEntryComponent

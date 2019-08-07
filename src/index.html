@@ -16,8 +16,8 @@
         
         <h1 class='elegantshadow'>Daily Journal</h1>
 
-
-        <form action="">
+        <div>
+        
 
             <fieldset class="container">
                 <label for="journalDate">Date of Entry</label>
@@ -26,17 +26,17 @@
 
             <fieldset>
                 <label for="journalConcepts">Concepts Covered</label>
-                <input type="text" name="journalConcepts" id="journalConcepts">
+                <input type="text" name="journalConcepts" id="journalConcept">
             </fieldset>
 
             <fieldset>
                 <label for="journalEntry">Journal Entry</label>
-                <textarea name="message" rows="1" cols="33">Message</textarea>
+                <textarea id = "journalEntry" name="message" rows="1" cols="33">Message</textarea>
             </fieldset>
 
             <fieldset>
                 <label for="mood">Mood for the Day</label>
-                <select>
+                <select id = "journalMood">
                     <option value="despair">Despair</option>
                     <option value="confused">A little confused</option>
                     <option value="okay">Okay</option>
@@ -45,10 +45,10 @@
                 </select>
             </fieldset>
 
-            <input type="button" onclick="alert('Your entry has been submitted')" value="Record Journal Entry">
+            <button id="recordEntryButton" type="button">Submit Entry</button>
 
 
-        </form>
+        </div>
 
         <article id="entryLog">
 
@@ -56,10 +56,8 @@
 
     </div>
 
-    <script src="scripts/data.js"></script>
-    <script src="scripts/factory.js"></script>  
-    <script src="scripts/dom.js"></script>  
-    <script src="scripts/main.js"></script>  
+      
+    <script type="module" src="scripts/journal.js"></script>  
      
 </body>
 
