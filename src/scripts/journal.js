@@ -48,6 +48,10 @@ document.querySelector("#recordEntryButton").addEventListener("click", event => 
     //pass new journal entry to API and render new array to DOM
     API.saveJournalEntry(newJournalEntry).then(getAndRenderEntries)
 
+    journalConcept.value = ""
+    journalDate.value = ""
+    journalEntry.value = ""
+    journalMood.value = ""
 
 })
 
