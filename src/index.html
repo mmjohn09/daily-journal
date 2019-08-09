@@ -13,11 +13,11 @@
 
     <div id="journalList">
 
-        
+
         <h1 class='elegantshadow'>Daily Journal</h1>
 
         <div>
-        
+
 
             <fieldset class="container">
                 <label for="journalDate">Date of Entry</label>
@@ -31,12 +31,12 @@
 
             <fieldset>
                 <label for="journalEntry">Journal Entry</label>
-                <textarea id = "journalEntry" name="message" rows="1" cols="33">Message</textarea>
+                <textarea id="journalEntry" name="message" rows="1" cols="33">Message</textarea>
             </fieldset>
 
             <fieldset>
                 <label for="mood">Mood for the Day</label>
-                <select id = "journalMood">
+                <select id="journalMood">
                     <option value="despair">Despair</option>
                     <option value="confused">A little confused</option>
                     <option value="okay">Okay</option>
@@ -50,15 +50,36 @@
 
         </div>
 
+        <div>
+            <fieldset>
+                <legend>Filter journal entries by mood</legend>
+
+                <input type="radio" id="mood--1" name="radioButton" value="despair">
+                <label for="despair">despair</label>
+
+                <input type="radio" id="mood--2" name="radioButton" value="confused">
+                <label for="confused">confused</label>
+
+                <input type="radio" id="mood--3" name="radioButton" value="okay">
+                <label for="okay">okay</label>
+
+                <input type="radio" id="mood--4" name="radioButton" value="happy">
+                <label for="happy">happy</label>
+
+                <input type="radio" id="mood--5" name="radioButton" value="amazing">
+                <label for="amazing">amazing</label>
+            </fieldset>
+        </div>
+
         <article id="entryLog">
 
         </article>
 
     </div>
 
-      
-    <script type="module" src="scripts/journal.js"></script>  
-     
+
+    <script type="module" src="scripts/journal.js"></script>
+
 </body>
 
 </html>

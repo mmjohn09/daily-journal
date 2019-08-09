@@ -56,6 +56,21 @@ document.querySelector("#recordEntryButton").addEventListener("click", event => 
 })
 
 
+const radioButton = document.getElementsByName("radioButton")
+radioButton.forEach(button => {
+    button.addEventListener("click", event => {
+        const mood = event.target.value
+
+        API.filterJournalEntries(mood).then(filteredData => {
+            whereToDisplayJournalEntriesInDOM.innerHTML = ""
+            filteredData.forEach(moodObject => {
+                const filteredMood = makeJournalEntryComponent.createJournalEntry(moodObject)
+                whereToDisplayJournalEntriesInDOM.innerHTML += filteredMood
+            })
+
+        })
+    })
+})
 
 
 

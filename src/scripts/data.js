@@ -13,6 +13,11 @@ const API = {
             },
             body: JSON.stringify(newEntryObject)
         })
+    },
+
+    filterJournalEntries(radioValue) {
+        return fetch(`http://localhost:3000/entries?mood=${radioValue}`)
+            .then(entries => entries.json())
     }
 
 }
