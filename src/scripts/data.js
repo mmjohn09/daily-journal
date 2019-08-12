@@ -18,8 +18,20 @@ const API = {
     filterJournalEntries(radioValue) {
         return fetch(`http://localhost:3000/entries?mood=${radioValue}`)
             .then(entries => entries.json())
-    }
+    },
 
+    deleteJournalEntry(deleteButtonID) {
+        return fetch(`http://localhost:3000/entries/${deleteButtonID}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+    },
 }
+
+
+
+
 
 export default API

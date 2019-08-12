@@ -1,11 +1,14 @@
 const makeJournalEntryComponent = {
     createJournalEntry(journalEntry) {
         return `
-        <section>
-            <h2>${journalEntry.date}</h2>
-            <h3>Concepts Learned: ${journalEntry.concepts}</h3>
-            <h3>Entry: ${journalEntry.entry}</h3>
-            <h3>Mood: ${journalEntry.mood}</h3>
+        <section class="card" "journalEntry--${journalEntry.id}">
+          
+                <h2>${journalEntry.date}</h2>
+                <p>Concepts Learned: ${journalEntry.concepts}</p>
+                <p>Entry: ${journalEntry.entry}</p>
+                <p>Mood: ${journalEntry.mood}</p>
+            
+            <button id="deleteButton--${journalEntry.id}" type="button">Delete Entry</button>
         </section>
     `
     }

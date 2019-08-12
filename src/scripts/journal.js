@@ -74,4 +74,16 @@ radioButton.forEach(button => {
 
 
 
+ 
+    document.querySelector("#entryLog").addEventListener("click", event => {
+        if (event.target.id.startsWith("deleteButton--")) {
+            const entryToDelete = event.target.id.split("--")[1]
+
+            API.deleteJournalEntry(entryToDelete)
+                .then(getAndRenderEntries)
+        }
+    })
+
+
+
 
